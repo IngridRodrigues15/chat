@@ -5,10 +5,17 @@ class User < ApplicationRecord
 
   attr_accessor :skip_password_validation  # virtual attribute to skip password validation while saving
 
+  enum status: [ :online, :away, :off ]
+
+  def appear(data)
+    self.online
+    self.save
+  end
+
   protected
 
   def password_required?
-    return false 
+    return false
     super
   end
 end
