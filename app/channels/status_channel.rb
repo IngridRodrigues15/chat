@@ -1,4 +1,4 @@
-class StatusChannel < ApplicationCable::Channel
+class StatusChannel < ApplicationCable::Channel  
   def subscribed
     stream_from "status"
     current_user.online

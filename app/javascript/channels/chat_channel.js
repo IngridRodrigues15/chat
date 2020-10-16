@@ -11,7 +11,7 @@ consumer.subscriptions.create("ChatChannel", {
   },
 
   received(data) {
-    $("#msg-card").append('<div class="d-flex justify-content-start mb-4"><div class="msg_cotainer" id="messages"><p>'+data.message+'</p><div><div>');
+    $("#msg-card").append('<div class="d-flex justify-content-start mb-4"><div class="msg_cotainer" id="messages"><p>'+data.message+'</p></div></div>');
     $(".type_msg").val("");
     $(".msg_card_body").scrollTop($('.msg_card_body')[0].scrollHeight);
   }
